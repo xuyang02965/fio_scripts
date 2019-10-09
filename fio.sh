@@ -607,12 +607,12 @@ done > $JOBFILE
 function randrw {
 for i in 1 ; do
 cat << EOF
-[job]
+[job$JOBNUMBER]
 rw=randrw
 rwmixread=80
-bs=8k
+bs=${READSIZE}k
 sync=0
-numjobs=$USERS
+numjobs=1
 EOF
 done >> $JOBFILE
 }
@@ -637,7 +637,7 @@ for i in 1 ; do
 cat << EOF
 [job$JOBNUMBER]
 rw=randread
-bs=8k
+bs=${READSIZE}k
 numjobs=1
 offset=$OFFSET
 EOF

@@ -47,7 +47,7 @@ do
              ARGUMENTS="$ARGUMENTS rplots percentiles"
              RPLOTS=1
              PERCENTILES=1
-             export TESTNAME=$OPTARG
+             export TESTNAME="${@: -1}"
              ;;
          r)
              ARGUMENTS="$ARGUMENTS rplots percentiles"
