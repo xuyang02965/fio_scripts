@@ -20,7 +20,7 @@ do
         for usrnum in ${USER_NUM[*]};
         do
            #echo $optype $blksz $usrnum 
-           ./fio.sh -b /home/ksp/code/fio/fio-2.0.7/fio -o ${OUTPUT_DIR} -w ${WORK_DIR} -t ${optype}  -l ${blksz} -m ${FILESZ} -u ${usrnum} -s ${TEST_INTERVAL} -f 
+           ./fio.sh -b ./fio -o ${OUTPUT_DIR} -w ${WORK_DIR} -t ${optype}  -l ${blksz} -m ${FILESZ} -u ${usrnum} -s ${TEST_INTERVAL} -f 
         done
     done
 done
